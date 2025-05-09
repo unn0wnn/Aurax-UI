@@ -111,6 +111,11 @@ function Flux:Window(text, bottom,mainclr,toclose)
 	MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
 	MainFrame.Size = UDim2.new(0, 0, 0, 0)
 
+	CloseButton.MouseButton1Click:Connect(function()
+	FluxLib:Destroy() -- UI bener-bener ilang
+	end)
+
+
 	MainCorner.CornerRadius = UDim.new(0, 5)
 	MainCorner.Name = "MainCorner"
 	MainCorner.Parent = MainFrame
